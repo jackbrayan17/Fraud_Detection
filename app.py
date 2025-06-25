@@ -7,15 +7,11 @@ import xgboost as xgb
 # Page config : light mode et wide layout
 st.set_page_config(page_title="Détection de Fraude", layout="wide", initial_sidebar_state="expanded")
 
-# Définir liens des images hébergées
-IMAGE1_URL = "https://github.com/jackbrayan17/Fraud_Detection/edit/main/image1.jpg"
-IMAGE2_URL = "https://github.com/jackbrayan17/Fraud_Detection/edit/main/image2.jpg"
 
 # Load du modèle (vérifie que le fichier est bien dans ton repo Streamlit Cloud)
 model = joblib.load("xgb_model.pkl")
 
 # Sidebar
-st.sidebar.image(IMAGE1_URL, use_container_width=True)
 st.sidebar.title("🧭 Navigation")
 
 Acceuil = st.sidebar.button("Accueil", key="home", use_container_width=True)
@@ -54,7 +50,7 @@ st.markdown("""
         .card-hover:hover {
             box-shadow: 0px 6px 20px rgba(13,110,253,0.3);
             transform: translateY(-5px);
-            background-color: #e6f7ff;
+            background-color: red;
         }
     </style>
 """, unsafe_allow_html=True)
@@ -62,32 +58,15 @@ st.markdown("""
 # --------- PAGE ACCUEIL ---------
 if st.session_state.page == "Accueil":
     st.title("💳 Application de Détection de Fraude")
-    st.image(IMAGE2_URL, use_container_width=True)
-    st.markdown("""
-        ### À propos de l'application
-        Cette application permet de **détecter automatiquement les transactions frauduleuses** via un modèle de machine learning (**XGBoost**).
 
-        🔍 **Fonctionnalités :**
-        - Interface utilisateur fluide
-        - Prédiction en temps réel
-        - Visualisation des données saisies
-
-        🧠 **But :** Aider les banques et fintechs à réduire les fraudes et à protéger leurs clients.
-    """)
 
 # --------- PAGE DETECTION ---------
 if st.session_state.page == "Fraude_Detection":
-    st.title("🕵️ Détection de Fraude")
+    st.title(" Détection de Fraude")
 
-    st.markdown("""
-        <div style="background: linear-gradient(135deg, #087ff0 0%, #0eabdf 100%);
-        padding: 2rem; border-radius: 15px; margin: 1rem 0; color: white; text-align: center;">
-            <h3>📝 Remplissez les informations</h3>
-            <p>Obtenez une prédiction immédiate</p>
-        </div>
-    """, unsafe_allow_html=True)
+ 
 
-    st.subheader("📝 Entrée des données")
+    st.subheader(" Entrée des données")
 
     with st.form("fraude_form"):
         col1, col2 = st.columns(2)
