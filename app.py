@@ -57,9 +57,10 @@ st.markdown("""
 
 # --------- PAGE ACCUEIL ---------
 if st.session_state.page == "Accueil":
-    st.title("💳 Application de Détection de Fraude")
-
-
+    st.title("💳 FRAUD DETECTION")
+    
+     st.subheader("WELCOME")
+     st.write("Cette plateforme a pour but de prepdire des fraude avec les cartes bancaires")
 # --------- PAGE DETECTION ---------
 if st.session_state.page == "Fraude_Detection":
     st.title(" Détection de Fraude")
