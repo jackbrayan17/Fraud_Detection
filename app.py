@@ -12,7 +12,7 @@ model = joblib.load("xgb_model.pkl")
 
 # Page config
 st.set_page_config(page_title="Détection de Fraude", layout="wide")
-
+st.write("By EYOUM ATOCK J_J BRAYAN")
 # Sidebar navigation
 st.sidebar.image('image1.jpg', use_container_width=True)
 st.sidebar.title("🧭 Navigation")
