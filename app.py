@@ -8,8 +8,8 @@ import xgboost as xgb
 st.set_page_config(page_title="Détection de Fraude", layout="wide", initial_sidebar_state="expanded")
 
 # Définir liens des images hébergées
-IMAGE1_URL = "https://raw.githubusercontent.com/username/repo/branch/images/image1.jpg"
-IMAGE2_URL = "https://raw.githubusercontent.com/username/repo/branch/images/image2.jpg"
+IMAGE1_URL = "https://github.com/jackbrayan17/Fraud_Detection/edit/main/image1.jpg"
+IMAGE2_URL = "https://github.com/jackbrayan17/Fraud_Detection/edit/main/image2.jpg"
 
 # Load du modèle (vérifie que le fichier est bien dans ton repo Streamlit Cloud)
 model = joblib.load("xgb_model.pkl")
