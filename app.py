@@ -13,7 +13,7 @@ model = joblib.load("xgb_model.pkl")
 st.markdown("""
     <style>
         .card-hover {
-            
+            background-color: black;
             border: 1px solid #dee2e6;
             border-radius: 12px;
             padding: 20px;
