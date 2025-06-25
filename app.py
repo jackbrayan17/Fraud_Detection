@@ -6,14 +6,14 @@ import xgboost as xgb
 # Page config : light mode et wide layout
 st.set_page_config(page_title="Détection de Fraude", layout="wide")
 
-# Load du modèle (vérifie que le fichier est bien dans ton repo Streamlit Cloud)
+# Load du modèle
 model = joblib.load("xgb_model.pkl")
 
 # Custom CSS pour un look clean
 st.markdown("""
     <style>
         .card-hover {
-            background-color: black;
+            background-color: darkblue;  /* Change to dark blue */
             border: 1px solid #dee2e6;
             border-radius: 12px;
             padding: 20px;
